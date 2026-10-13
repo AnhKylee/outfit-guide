@@ -1,4 +1,3 @@
-// data/styles.ts
 import type { OutfitRow, Swatch } from "./outfits";
 
 export type FashionStyle = {
@@ -145,12 +144,42 @@ export const styles: FashionStyle[] = [
           s("Dép Quai Hậu Đen", "#1A1A1A"),
         ],
       },
+      {
+        id: "basic-blacktrouser",
+        pant: "Quần Tây Đen",
+        pantColors: [s("Đen", "#111111"), s("Xám Than", "#36454F")],
+        style: "Sơ mi trắng, Áo polo trơn, Áo thun phom ôm vừa.",
+        tops: [
+          s("Trắng", "#FFFFFF"),
+          s("Xanh Nhạt", "#ADD8E6"),
+          s("Xám Nhạt", "#D3D3D3"),
+          s("Đỏ Rượu Vang", "#722F37"),
+        ],
+        outer: [s("Blazer Xám", "#6B7075"), s("Khoác Da Đen", "#111111")],
+        shoes: [s("Oxford Đen", "#111111"), s("Sneakers Trắng", "#FFFFFF")],
+      },
+      {
+        id: "basic-whitejeans",
+        pant: "Jeans Trắng / Kem",
+        pantColors: [s("Trắng", "#FFFFFF"), s("Kem", "#F3E9D2")],
+        style: "Áo thun đen, Sơ mi denim xanh, Áo polo navy.",
+        tops: [
+          s("Đen", "#111111"),
+          s("Xanh Navy", "#0A192F"),
+          s("Xanh Nhạt", "#ADD8E6"),
+          s("Xanh Rêu", "#4A5D4E"),
+        ],
+        outer: [s("Denim Jacket", "#3B5B8C"), s("Bomber Navy", "#0A192F")],
+        shoes: [s("Sneakers Trắng", "#FFFFFF"), s("Loafers Nâu", "#704214")],
+      },
     ],
     rules: [
       "Giữ tối đa 3 màu chính trong một set đồ (không tính giày và phụ kiện).",
       "Quần sáng đi với áo tối và ngược lại để tạo tương phản tự nhiên.",
-      "Áo phom ôm vừa với quần ống đứng; áo oversize nên đi với quần gọn hơn.",
+      "Áo form ôm vừa với quần ống đứng; áo oversize nên đi với quần gọn hơn.",
       "Màu giày và thắt lưng nên cùng tông với nhau.",
+      "Quần tây đen đi với áo sáng; giày đen hoặc trắng đều ổn.",
+      "Với jeans trắng/kem, chọn áo màu đậm hoặc xanh để tạo tương phản.",
     ],
   },
   {
@@ -237,11 +266,63 @@ export const styles: FashionStyle[] = [
           s("Chelsea Boots Đen", "#111111"),
         ],
       },
+      {
+        id: "min-navy-tonal",
+        pant: "Set Tonal Xanh Navy",
+        pantColors: [s("Navy", "#0A192F"), s("Navy Nhạt", "#2F4A6B")],
+        style:
+          "Áo polo dệt kim navy, Áo thun dày cùng tông, Sơ mi Oxford xanh nhạt.",
+        tops: [
+          s("Navy Sáng", "#3B5B8C"),
+          s("Xanh Nhạt", "#ADD8E6"),
+          s("Trắng", "#FFFFFF"),
+        ],
+        outer: [s("Blazer Navy", "#0A192F"), s("Khoác Mỏng Navy", "#1F2F4D")],
+        shoes: [
+          s("Loafers Nâu Đậm", "#3E2723"),
+          s("Sneakers Trắng", "#FFFFFF"),
+        ],
+      },
+      {
+        id: "min-cream-tonal",
+        pant: "Set Tonal Kem / Trắng Ngà",
+        pantColors: [s("Kem", "#F3E9D2"), s("Trắng Ngà", "#FDFBF7")],
+        style: "Áo len mỏng màu kem, Sơ mi linen trắng, Áo thun trơn dày.",
+        tops: [
+          s("Be", "#E8DCC4"),
+          s("Trắng Ngà", "#FDFBF7"),
+          s("Nâu Nhạt", "#A9895E"),
+        ],
+        outer: [s("Măng Tô Kem", "#E3D5B8"), s("Cardigan Be", "#D8C9A8")],
+        shoes: [
+          s("Sneakers Trắng", "#FFFFFF"),
+          s("Loafers Da Lộn Be", "#B8A07A"),
+        ],
+      },
+      {
+        id: "min-wide-black",
+        pant: "Quần Đen Ống Suông Rộng",
+        pantColors: [s("Đen", "#111111"), s("Xám Than", "#4A4F55")],
+        style:
+          "Áo thun trắng sơ vin, Áo len cổ lọ mỏng, Sơ mi trắng form suông.",
+        tops: [
+          s("Trắng", "#FFFFFF"),
+          s("Xám Ghi", "#8E949A"),
+          s("Kem", "#F3E9D2"),
+        ],
+        outer: [
+          s("Blazer Đen Dáng Dài", "#1A1A1A"),
+          s("Măng Tô Xám", "#6B7075"),
+        ],
+        shoes: [s("Loafers Đen", "#111111"), s("Sneakers Đen Trơn", "#1A1A1A")],
+      },
     ],
     rules: [
       "Chỉ dùng 2–3 màu trung tính: trắng, đen, xám, be.",
       "Chọn chất liệu tốt thay vì họa tiết: cotton dày, len, linen.",
       "Tránh logo lớn; form áo quần suông, vừa vặn.",
+      "Mặc tonal (cùng một họ màu, khác sắc độ) để nhìn sang mà không cần phụ kiện.",
+      "Xây tủ đồ từ 5–7 màu trung tính rồi mix qua lại.",
     ],
   },
   {
@@ -348,11 +429,64 @@ export const styles: FashionStyle[] = [
           s("Boots Chunky Đen", "#111111"),
         ],
       },
+      {
+        id: "street-blackcargo",
+        pant: "Quần Cargo Đen",
+        pantColors: [s("Đen", "#111111"), s("Đen Bạc", "#2B2B2B")],
+        style: "Hoodie, Áo thun oversize đen/trắng, Áo tank layer bên trong.",
+        tops: [
+          s("Trắng", "#FFFFFF"),
+          s("Đen", "#111111"),
+          s("Xám Mốc", "#8E949A"),
+        ],
+        outer: [s("Bomber Đen", "#1A1A1A"), s("Utility Vest", "#4B5320")],
+        shoes: [
+          s("Sneakers Trắng", "#FFFFFF"),
+          s("Sneakers Cam Nổi Bật", "#D2452B"),
+        ],
+      },
+      {
+        id: "street-baggyblack",
+        pant: "Jeans Baggy Đen Wash",
+        pantColors: [s("Đen Wash", "#2B2B2B"), s("Xám Wash", "#4A4F55")],
+        style: "Áo thun graphic, Áo nỉ cổ tròn, Sơ mi flannel mặc hở.",
+        tops: [
+          s("Trắng", "#FFFFFF"),
+          s("Xám Mốc", "#8E949A"),
+          s("Đỏ Gạch", "#B5502F"),
+        ],
+        outer: [
+          s("Coach Jacket Đen", "#111111"),
+          s("Khoác Da Biker", "#1A1A1A"),
+        ],
+        shoes: [
+          s("Vans Old Skool", "#111111"),
+          s("Converse Cao Cổ", "#FFFFFF"),
+        ],
+      },
+      {
+        id: "street-denimshort",
+        pant: "Quần Short Denim Dài Qua Gối",
+        pantColors: [s("Xanh Wash", "#6F8FB5"), s("Đen Wash", "#2B2B2B")],
+        style: "Áo thun boxy, Áo tank top, Sơ mi cộc tay mặc hở.",
+        tops: [
+          s("Trắng", "#FFFFFF"),
+          s("Đen", "#111111"),
+          s("Cam Gạch", "#B5502F"),
+        ],
+        outer: [s("Áo Khoác Gió Mỏng", "#4B5320")],
+        shoes: [
+          s("Sneakers Chunky", "#E8E8E8"),
+          s("Dép Quai Hậu Đen", "#1A1A1A"),
+        ],
+      },
     ],
     rules: [
       "Cân bằng tỷ lệ: trên rộng thì dưới có thể rộng, nhưng giày phải đủ to.",
       "Chọn 1 món làm điểm nhấn (giày, áo khoác hoặc áo in).",
       "Phụ kiện đơn giản: mũ lưỡi trai, túi đeo chéo, vòng cổ.",
+      "Chỉ chọn 1 điểm nhấn màu (giày, mũ hoặc áo), phần còn lại giữ màu trầm.",
+      "Bộ toàn đen đi với giày trắng luôn là công thức an toàn.",
     ],
   },
   {
@@ -433,11 +567,62 @@ export const styles: FashionStyle[] = [
         outer: [s("Blazer Nâu", "#8B5A2B"), s("Bomber Đen", "#1A1A1A")],
         shoes: [s("Derby Nâu", "#3E2723"), s("Sneakers Trắng", "#FFFFFF")],
       },
+      {
+        id: "smart-khaki",
+        pant: "Quần Chinos Khaki",
+        pantColors: [s("Khaki", "#C3B091"), s("Kem Đậm", "#D8C9A8")],
+        style: "Sơ mi Oxford xanh nhạt, Áo polo, Áo len cổ tròn.",
+        tops: [
+          s("Xanh Nhạt", "#ADD8E6"),
+          s("Trắng", "#FFFFFF"),
+          s("Hồng Nhạt", "#FFC0CB"),
+        ],
+        outer: [s("Blazer Navy", "#0A192F"), s("Cardigan Be", "#D8C9A8")],
+        shoes: [s("Loafers Nâu", "#704214"), s("Derby Nâu", "#3E2723")],
+      },
+      {
+        id: "smart-cream",
+        pant: "Quần Kem / Trắng Tailored",
+        pantColors: [s("Kem", "#F3E9D2"), s("Trắng", "#FFFFFF")],
+        style:
+          "Áo thun xám sơ vin, Polo dệt kim, Sơ mi trắng, thêm lớp overshirt.",
+        tops: [
+          s("Xám Nhạt", "#D3D3D3"),
+          s("Đen", "#111111"),
+          s("Xanh Navy", "#0A192F"),
+        ],
+        outer: [
+          s("Overshirt Xanh Rêu Nâu", "#6B6B3A"),
+          s("Blazer Ca-rô Trắng/Xám", "#B8BCC0"),
+        ],
+        shoes: [
+          s("Chelsea Da Lộn Nâu", "#7A5A3A"),
+          s("Loafers Da Lộn Taupe", "#A89984"),
+        ],
+      },
+      {
+        id: "smart-navyshort",
+        pant: "Quần Short Tây Navy (Trời Nóng)",
+        pantColors: [s("Navy", "#0A192F"), s("Navy Nhạt", "#2F4A6B")],
+        style: "Polo dệt kim trắng, Sơ mi linen ngắn tay, Áo thun trơn dày.",
+        tops: [
+          s("Trắng", "#FFFFFF"),
+          s("Xanh Nhạt", "#ADD8E6"),
+          s("Kem", "#F3E9D2"),
+        ],
+        outer: [s("Blazer Linen Be (tùy chọn)", "#D8C9A8")],
+        shoes: [
+          s("Loafers Da Lộn Nâu", "#7A5A3A"),
+          s("Sneakers Da Trắng", "#F2F2F2"),
+        ],
+      },
     ],
     rules: [
       "Quần và áo vừa vặn, không quá rộng hay quá ôm.",
       "Giày da hoặc sneakers da trơn; tránh giày thể thao lòe loẹt.",
       "Thắt lưng cùng tông với giày.",
+      "Công thức cổ điển: blazer navy + sơ mi xanh nhạt + chinos khaki + loafers nâu.",
+      "Trời nóng: ưu tiên linen/cotton mỏng, quần short tây dài vừa phải, loafers không tất.",
     ],
   },
   {
@@ -518,18 +703,60 @@ export const styles: FashionStyle[] = [
           s("Boots Cổ Thấp Đen", "#1A1A1A"),
         ],
       },
+      {
+        id: "vintage-90s",
+        pant: "Jeans Ống Suông Kiểu 90s",
+        pantColors: [
+          s("Xanh Wash Đậm", "#3B5B8C"),
+          s("Xanh Wash Nhạt", "#6F8FB5"),
+        ],
+        style:
+          "Áo thun graphic, Áo flannel kẻ, Áo polo dệt kim phong cách 70s.",
+        tops: [
+          s("Trắng Ngà", "#FDFBF7"),
+          s("Đỏ Rượu", "#722F37"),
+          s("Vàng Mù Tạt", "#E1AD01"),
+          s("Xanh Rêu", "#4A5D4E"),
+        ],
+        outer: [
+          s("Khoác Workwear Nâu", "#7A5A3A"),
+          s("Denim Jacket", "#3B5B8C"),
+        ],
+        shoes: [
+          s("Sneakers Chunky Retro", "#D9D2C0"),
+          s("Boots Nâu", "#5C4033"),
+        ],
+      },
+      {
+        id: "vintage-safari",
+        pant: "Quần Be Đất Nhiều Túi",
+        pantColors: [s("Be Đất", "#B8A07A"), s("Nâu Cát", "#8B6B4A")],
+        style: "Sơ mi safari, Áo thun cổ tròn trơn, Áo len cổ lọ mỏng.",
+        tops: [
+          s("Kem", "#F3E9D2"),
+          s("Nâu Caramel", "#A9733A"),
+          s("Cam Gạch", "#B5502F"),
+        ],
+        outer: [
+          s("Safari Jacket Be", "#C3B091"),
+          s("Khoác Corduroy Nâu", "#8B5A2B"),
+        ],
+        shoes: [s("Boots Da Lộn", "#9C7A54"), s("Loafers Nâu", "#704214")],
+      },
     ],
     rules: [
       "Ưu tiên tông màu ấm, hơi ngả vàng như nâu, be, cam gạch, mù tạt.",
       "Chất liệu có độ dày và texture: corduroy, denim, len, da.",
       "Chỉ cần 1–2 món hoài cổ là đủ, tránh mặc toàn bộ để không bị cosplay.",
+      "Mặc tonal với corduroy trong các tông nâu, xanh rêu, mù tạt rất dễ ra chất 70s.",
+      "Pha trộn thập niên (ví dụ áo len 70s + denim 90s) để không bị như hóa trang.",
     ],
   },
   {
     slug: "workwear",
     label: "Workwear",
     emoji: "🛠️",
-    description: "Công nhân hiện đại: bền, nhiều túi, màu đất, phong cách mộc.",
+    description: "Nhân viên hiện đại: bền, nhiều túi, màu đất, phong cách mộc.",
     rows: [
       {
         id: "work-carpenter",
@@ -599,11 +826,48 @@ export const styles: FashionStyle[] = [
         outer: [s("Sơ mi Flannel Mặc Hở", "#722F37")],
         shoes: [s("Work Boots", "#5C4033"), s("Sneakers Trắng", "#FFFFFF")],
       },
+      {
+        id: "work-canvas-dk",
+        pant: "Quần Canvas Double-Knee",
+        pantColors: [s("Nâu Canvas", "#8B6B4A"), s("Be Đậm", "#B8A07A")],
+        style: "Sơ mi Chambray, Sơ mi Flannel, Áo thun dày.",
+        tops: [
+          s("Xanh Chambray", "#6F8FB5"),
+          s("Đỏ Gạch", "#B5502F"),
+          s("Kem", "#F3E9D2"),
+        ],
+        outer: [
+          s("Chore Coat Navy", "#1F2F4D"),
+          s("Chore Coat Nâu", "#7A5A3A"),
+        ],
+        shoes: [s("Work Boots", "#5C4033"), s("Moc Toe Boots Nâu", "#704214")],
+      },
+      {
+        id: "work-chino-cord",
+        pant: "Quần Chinos Khaki + Chore Coat Cord",
+        pantColors: [s("Khaki", "#C3B091"), s("Be", "#E8DCC4")],
+        style: "Sơ mi len cổ bẻ, Áo len cổ tròn, Áo thun trơn.",
+        tops: [
+          s("Xanh Rêu", "#4A5D4E"),
+          s("Kem", "#F3E9D2"),
+          s("Xám Đậm", "#4A4F55"),
+        ],
+        outer: [
+          s("Chore Coat Corduroy Navy", "#1F2F4D"),
+          s("Waistcoat Corduroy Xám", "#6B7075"),
+        ],
+        shoes: [
+          s("Chelsea Boots", "#1A1A1A"),
+          s("Alpine Boots Nâu Đậm", "#3E2723"),
+        ],
+      },
     ],
     rules: [
       "Chọn màu đất: nâu, olive, xanh chàm, be, đen.",
       "Chất liệu ưu tiên canvas, denim dày, twill, đường may chắc.",
       "Giày boots hoặc sneakers da để giữ vẻ mộc mạc.",
+      "Công thức chuẩn: chore coat + sơ mi chambray/flannel + quần canvas + boots.",
+      "Chọn chất liệu thật (canvas, denim dày, corduroy) thay vì chỉ chọn màu.",
     ],
   },
 ];
